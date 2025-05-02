@@ -6,22 +6,31 @@
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <div id="toolbar">
-    <button id="saveScene" title="Save Scene (Ctrl+S)">💾</button>
-    <label for="loadScene" title="Load Scene (Ctrl+O)" style="cursor:pointer">📂</label>
-    <input type="file" id="loadScene" accept=".json">
-    <button id="stayOnTopBtn" title="Toggle Always on Top">📌</button>
-    <button id="undoBtn" title="Undo (Ctrl+Z)">↩</button>
-    <button id="redoBtn" title="Redo (Ctrl+Y)">↪</button>
-    <button id="clearBtn" title="Clear Canvas">🗑</button>
+  <div id="title-bar"></div>
+
+  <div id="side-menu" class="collapsed">
+    <button id="menu-toggle">☰</button>
+    <div class="menu-content">
+      <button id="saveScene">Save</button>
+      <button id="loadTriggerBtn">Load</button>
+      <input type="file" id="loadScene" accept=".json">
+      <button id="stayOnTopBtn">Stay on Top</button>
+      <button id="undoBtn">Undo</button>
+      <button id="redoBtn">Redo</button>
+      <button id="clearBtn">Clear</button>
+      <button id="helpBtn">Shortcuts</button>
+    </div>
   </div>
 
   <div id="selectionBox"></div>
   <canvas id="selectionCanvas"></canvas>
+
   <div class="scroll-container">
     <div id="canvas"></div>
   </div>
+
   <div id="placeholder" class="placeholder">Drop images or paste from clipboard</div>
+
   <div id="status-bar">
     <span id="selection-info">No selection</span>
     <span id="zoom-info">Zoom: <span id="zoom-level">100%</span></span>
