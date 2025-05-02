@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reffy</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div id="toolbar">
+    <button id="saveScene" title="Save Scene (Ctrl+S)">💾</button>
+    <label for="loadScene" title="Load Scene (Ctrl+O)" style="cursor:pointer">📂</label>
+    <input type="file" id="loadScene" accept=".json">
+    <button id="stayOnTopBtn" title="Toggle Always on Top">📌</button>
+    <button id="undoBtn" title="Undo (Ctrl+Z)">↩</button>
+    <button id="redoBtn" title="Redo (Ctrl+Y)">↪</button>
+    <button id="clearBtn" title="Clear Canvas">🗑</button>
+  </div>
+
+  <div id="selectionBox"></div>
+  <canvas id="selectionCanvas"></canvas>
+  <div class="scroll-container">
+    <div id="canvas"></div>
+  </div>
+  <div id="placeholder" class="placeholder">Drop images or paste from clipboard</div>
+  <div id="status-bar">
+    <span id="selection-info">No selection</span>
+    <span id="zoom-info">Zoom: <span id="zoom-level">100%</span></span>
+    <span id="image-count">0 items</span>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
